@@ -9,17 +9,19 @@ end
 
 index = client.follower_ids("kurakore_index").to_a
 temari = client.follower_ids("SKTemari").to_a
-
+p temari
 overlap = index & temari
 
 if overlap == []
 p 'mission complete!'
 else
-victim = 786474592550256640
-client.block(victim)
-client.unblock(victim)
-
+victim = overlap
+#client.block(victim)
+#client.unblock(victim)
 
 end
+baggage = temari.sample(5)
+p baggage
+
 
 
